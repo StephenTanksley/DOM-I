@@ -57,6 +57,14 @@ const ctaButton = document.querySelector('.cta-text button')
 ctaButton.textContent = siteContent['cta']['h1'];
 
 
+//Experimentation with an event listener.
+ctaButton.addEventListener('click', buttonClick);
+
+//when you click on the call to action button, 
+function buttonClick() {
+  alert(`You clicked the button! You get a special prize! www.youtube.com/watch?v=dQw4w9WgXcQ`) 
+}
+
 //nav items
 
 
