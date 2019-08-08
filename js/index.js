@@ -58,27 +58,29 @@ ctaButton.textContent = siteContent['cta']['h1'];
 
 
 //nav items
+
+
 const navItems = document.querySelectorAll('nav a');
 navItems.forEach((element, i) => {
   element.style.color = 'green'
   element.textContent = siteContent['nav'][`nav-item-${i++}`];
 })
 
-// navItems.appendChild()
 
 //STILL NEED HELP HERE!
 
-// const navBar = document.querySelector('nav')
+const navBar = document.querySelectorAll('nav a')
 
 
-// const process = document.createElement('a')
-// process.textContent = 'Process'
+const process = document.createElement('a')
+process.textContent = 'Process'
 
-// const studies = document.createElement('a')
-// studies.textContent = 'Studies'
+const studies = document.createElement('a')
+studies.textContent = 'Studies'
 
-// navBar[2].append(process)
-// navBar[5].prepend(studies)
+navBar[2].append(process)
+navBar[5].prepend(studies)
+
 
 
 //main content
