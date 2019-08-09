@@ -55,6 +55,8 @@ ctaHeader.textContent = siteContent['cta']['h1'];
 
 const ctaButton = document.querySelector('.cta-text button')
 ctaButton.textContent = siteContent['cta']['h1'];
+ctaButton.style.borderRadius = '.5rem'
+ctaButton.style.borderWidth = '.15rem'
 
 
 //Experimentation with an event listener.
@@ -77,18 +79,17 @@ navItems.forEach((element, i) => {
 })
 
 
-//STILL NEED HELP HERE!
+//APPENDING/PREPENDING Items
 
 const navBar = document.querySelectorAll('nav a')
 
-
 const process = document.createElement('a')
 process.textContent = 'Process'
+navBar[2].append(process)
+
 
 const studies = document.createElement('a')
 studies.textContent = 'Studies'
-
-navBar[2].append(process)
 navBar[5].prepend(studies)
 
 
@@ -96,9 +97,6 @@ navBar[5].prepend(studies)
 //main content
 const mainContent = document.getElementById('middle-img');
 mainContent.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
-//THIS CODE IS SUPER DENSE. I CAN FIX THIS.
-//top content. FEATURES section.
 
 let topHeader = document.querySelectorAll('.top-content h4')
 topHeader[0].textContent = siteContent['main-content']['features-h4'];
@@ -119,18 +117,6 @@ let bottomText = document.querySelectorAll('.bottom-content p')
 bottomText[0].textContent = siteContent['main-content']['services-content'];
 bottomText[1].textContent = siteContent['main-content']['services-content'];
 bottomText[2].textContent = siteContent['main-content']['services-content'];
-
-// //PRODUCT section
-// let bottomMHeader = document.querySelectorAll('.bottom-content h4');
-
-// let bottomMText = document.querySelectorAll('.bottom-content p')
-// bottomMText[1].textContent = siteContent['main-content']['product-content'];
-
-
-// //VISION section
-
-// let bottomRText = document.querySelectorAll('.bottom-content p')
-// bottomRText[2].textContent = siteContent['main-content']['vision-content'];
 
 //contact section
 
