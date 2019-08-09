@@ -62,8 +62,10 @@ ctaButton.addEventListener('click', buttonClick);
 
 //when you click on the call to action button, 
 function buttonClick() {
-  alert(`You clicked the button! You get a special prize! www.youtube.com/watch?v=dQw4w9WgXcQ`) 
-}
+  if (window.confirm('You clicked the button! You deserve a reward. ')) 
+  {
+  window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+  };}
 
 //nav items
 
@@ -98,43 +100,37 @@ mainContent.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 //THIS CODE IS SUPER DENSE. I CAN FIX THIS.
 //top content. FEATURES section.
 
-let topLHeader = document.querySelector('.top-content h4');
-topLHeader.textContent = siteContent['main-content']['features-h4'];
+let topHeader = document.querySelectorAll('.top-content h4')
+topHeader[0].textContent = siteContent['main-content']['features-h4'];
+topHeader[1].textContent = siteContent['main-content']['about-h4'];
 
-let topLText = document.querySelector('.top-content p')
-topLText.textContent = siteContent['main-content']['features-content'];
-
-
-//not sure why these two aren't showing up. Need to ask Chris. ABOUT section
-let topRHeader = document.querySelectorAll('.top-content h4');
-topRHeader[1].textContent = siteContent['main-content']['about-h4'];
-
-let topRText = document.querySelectorAll('.top-content p')
-topRText[1].textContent = siteContent['main-content']['about-content'];
+let topText = document.querySelectorAll('.top-content p')
+topText[0].textContent = siteContent['main-content']['features-content'];
+topText[1].textContent = siteContent['main-content']['about-content'];
 
 //bottom content
 
-let bottomLHeader = document.querySelector('.bottom-content h4');
-bottomLHeader.textContent = siteContent['main-content']['services-h4'];
+let bottomHeader = document.querySelectorAll('.bottom-content h4');
+bottomHeader[0].textContent = siteContent['main-content']['services-h4'];
+bottomHeader[1].textContent = siteContent['main-content']['product-h4'];
+bottomHeader[2].textContent = siteContent['main-content']['vision-h4'];
 
-let bottomLText = document.querySelector('.bottom-content p')
-bottomLText.textContent = siteContent['main-content']['services-content'];
+let bottomText = document.querySelectorAll('.bottom-content p')
+bottomText[0].textContent = siteContent['main-content']['services-content'];
+bottomText[1].textContent = siteContent['main-content']['services-content'];
+bottomText[2].textContent = siteContent['main-content']['services-content'];
+
+// //PRODUCT section
+// let bottomMHeader = document.querySelectorAll('.bottom-content h4');
+
+// let bottomMText = document.querySelectorAll('.bottom-content p')
+// bottomMText[1].textContent = siteContent['main-content']['product-content'];
 
 
-//PRODUCT section
-let bottomMHeader = document.querySelectorAll('.bottom-content h4');
-bottomMHeader[1].textContent = siteContent['main-content']['product-h4'];
+// //VISION section
 
-let bottomMText = document.querySelectorAll('.bottom-content p')
-bottomMText[1].textContent = siteContent['main-content']['product-content'];
-
-
-//VISION section
-let bottomRHeader = document.querySelectorAll('.bottom-content h4');
-bottomRHeader[2].textContent = siteContent['main-content']['vision-h4'];
-
-let bottomRText = document.querySelectorAll('.bottom-content p')
-bottomRText[2].textContent = siteContent['main-content']['vision-content'];
+// let bottomRText = document.querySelectorAll('.bottom-content p')
+// bottomRText[2].textContent = siteContent['main-content']['vision-content'];
 
 //contact section
 
